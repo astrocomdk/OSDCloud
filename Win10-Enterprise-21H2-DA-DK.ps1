@@ -14,8 +14,8 @@ Install-Module OSD -Force
 Write-Host -ForegroundColor Green "Importing OSD PowerShell Module"
 Import-Module OSD -Force
 
-Install-Script -Name Get-WindowsAutoPilotInfo
-Get-WindowsAutoPilotInfo -Online
+#Install-Script -Name Get-WindowsAutoPilotInfo -Force
+#Get-WindowsAutoPilotInfo -Online
 
 #Start OSDCloud ZTI the RIGHT way
 Write-Host -ForegroundColor Green "Start OSDCloud"
