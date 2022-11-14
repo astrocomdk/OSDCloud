@@ -9,9 +9,9 @@ if ((Get-MyComputerModel) -match 'Virtual') {
 }
 #>
 
-Start-OOBE.autopilot
-Install-Script -Name Get-WindowsAutoPilotInfo -Force
-Get-WindowsAutoPilotInfo -Online
+#Start-OOBE.autopilot
+#Install-Script -Name Get-WindowsAutoPilotInfo -Force
+#Get-WindowsAutoPilotInfo -Online
 
 #Make sure I have the latest OSD Content
 Write-Host -ForegroundColor Green "Updating OSD PowerShell Module"
@@ -26,9 +26,9 @@ Import-Module OSD -Force
 #Start OSDCloud ZTI the RIGHT way
 Write-Host -ForegroundColor Green "Start OSDCloud"
 #Start-OSDCloud -OSLanguage da-dk -OSBuild 21H2 -OSEdition Enterprise -ZTI
-#Start-OSDCloud -OSLanguage da-dk -OSName "Windows 10 22H2 x64" -OSEdition Enterprise -ZTI
+Start-OSDCloud -OSLanguage da-dk -OSName "Windows 10 22H2 x64" -OSEdition Enterprise -ZTI
 
 #Restart from WinPE
-#Write-Host -ForegroundColor Green "Restarting in 20 seconds!"
-#Start-Sleep -Seconds 20
-#wpeutil reboot
+Write-Host -ForegroundColor Green "Restarting in 20 seconds!"
+Start-Sleep -Seconds 20
+wpeutil reboot
