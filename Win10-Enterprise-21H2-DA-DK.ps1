@@ -9,6 +9,10 @@ if ((Get-MyComputerModel) -match 'Virtual') {
 }
 #>
 
+Start-OOBE.autopilot
+Install-Script -Name Get-WindowsAutoPilotInfo -Force
+Get-WindowsAutoPilotInfo -Online
+
 #Make sure I have the latest OSD Content
 Write-Host -ForegroundColor Green "Updating OSD PowerShell Module"
 Install-Module OSD -Force
