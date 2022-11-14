@@ -29,6 +29,6 @@ Write-Host -ForegroundColor Green "Start OSDCloud"
 #Start-OSDCloud -OSLanguage da-dk -OSName "Windows 10 22H2 x64" -OSEdition Enterprise -ZTI
 
 #Restart from WinPE
-Write-Host -ForegroundColor Green "Restarting in 20 seconds!"
-Start-Sleep -Seconds 20
-wpeutil reboot
+#Write-Host -ForegroundColor Green "Restarting in 20 seconds!"
+#Start-Sleep -Seconds 20
+#wpeutil reboot
